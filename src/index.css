@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-12px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.heart-confetti {
+  position: absolute;
+  top: -10%;
+  font-size: 2rem;
+  animation: fall 6s linear infinite;
+  left: calc(10% + 80% * random());
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
+
+@font-face {
+  font-family: "Hugh";
+  src: url("./Notes-Bundle.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply font to entire site */
+html, body {
+  font-family: "Hugh", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+}
